@@ -13,8 +13,9 @@ struct MyCalcView: View {
     }
 }
 
-struct MyBMICalculatorView_Previews: PreviewProvider {
+/*struct MyBMICalculatorView_Previews: PreviewProvider {
     static var previews: some View {
         MyCalcView()
     }
 }
+*/

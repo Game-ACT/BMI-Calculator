@@ -32,13 +32,13 @@ struct MyDevView: View {
                     .background(.green)
                     .cornerRadius(10)
                     .padding(10)
+                Text("Assumption College Thonburi")
+                    .font(.system(.headline, design: .rounded))
                 // THIS PART IS TOO HARD TO COPY. DONT DO IT. IT JUST GONNA BREAK IT. IT IS A ADVANCED COMMAND JUST USE TEXT OR SMTH.
                 // just use google translate lul
                 Link("Game11454@proton.me", destination: URL(string: "mailto:Game11454@proton.me" )!)
-                    .padding(.top, 10)
                     .font(.system(.headline,design: .rounded))
                     .fontWeight(/*@START_MENU_TOKEN@*/.bold/*@END_MENU_TOKEN@*/)
-                Spacer()
             }
             .navigationTitle("About Me")
             .navigationBarTitleDisplayMode(.large)

@@ -10,6 +10,7 @@ struct MainView: View {
     var body: some View {
         NavigationView {
             VStack {
+                
                 NavigationLink(destination: MyCalcView()) {
                     Image(uiImage: UIImage(named: "bmi.png")!)
                         .renderingMode(.original)
@@ -17,6 +18,7 @@ struct MainView: View {
                         .aspectRatio(contentMode: .fit)
                         .padding()
                 }
+                
                 Text("Calculate BMI")
                     .font(.system(.title, design: .rounded))
                     .fontWeight(/*@START_MENU_TOKEN@*/.bold/*@END_MENU_TOKEN@*/)
