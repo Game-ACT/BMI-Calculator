@@ -32,6 +32,7 @@ struct MyDevView: View {
                     .background(.green)
                     .cornerRadius(10)
                     .padding(.bottom, 5)
+                // I changed some stuff here. Just ignore it. Refer to commits
                 Text("Assumption College Thonburi")
                     .font(.system(.headline, design: .rounded))
                     .frame(maxWidth: 250)
