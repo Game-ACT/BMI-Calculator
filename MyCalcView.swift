@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-// should be fixed
+// Nope
 struct MyCalcView: View {
     
     // delare values
