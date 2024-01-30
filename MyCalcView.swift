@@ -32,11 +32,11 @@ struct MyCalcView: View {
         }
         return result
     }
-    var body: some View {
+    /*var body: some View {
         ZStack {
             Color.init(red: 239/255, green: 244/255, blue: 244/255)
             
         }
-    }
+    }*/
 }
     
