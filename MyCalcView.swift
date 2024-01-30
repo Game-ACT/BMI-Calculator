@@ -16,19 +16,27 @@ struct MyCalcView: View {
     
     func bmiresultinterpert(bmiValue: Double) -> String {
         var result : String = "BMI Value = \(bmiValue) \n"
+        // translation not final
         if bmiValue >= 40 {
-            result += "คุณเป๊นโรคอ้วนขั้นสูงสุด กรุณาพบแพทย์ด่วน"
+            result += "You are extremely obese. Please seek medical attention immediately."
         } else if bmiValue >= 35 {
-            result += "คุณเป็นโรคอ้วนระดับ 2 คุณเสี่ยงต่อการเกิดโรคที่มากับความอ้วนหากคุณมีเส้นรอบเอวมากกว่าเกณท์ปกติคุณจะเสี่ยงต่อการเกิดโรคสูง คุณต้องควบคุมอาหาร และออกกำลังกายอย่างจริงจัง"
+            result += "You are obese, level 2. You are at risk of developing obesity-related diseases. If your waist circumference is greater than normal, you are at higher risk of developing obesity. You must control your diet. and exercise seriously"
         } else if bmiValue >= 28.5 {
-            result += "คุณเป็นโรคอ้วนระดับ 1 คุณจะมีโอกาสเกิดโรคความดันและเบาหวานจำเป็นต้องควบคุมอาหารและออกกำลังกาย"
+            result += "You are obese, level 1. You are more likely to develop high blood pressure and diabetes. You need to control your diet and exercise."
         } else if bmiValue >= 23.5 {
-            result += "น้ำหนักเกิน หากคุณมีกรรมพันธ์เป็นโรคเบาหวานหรือไขมันใน เลือดสูงต้องพยายามลดนั้าหนักให้ดัชนีมวลกายตํ่ากว่า 23"
+            result += "Overweight, If you are genetically affected by diabetes or high blood cholesterol, you must try to lose weight so that your body mass index is less than 23."
         } else if bmiValue >= 18.5{
-            result += "น้ำหนักปกติ หากมีปริมาณไขมันอยู่ในเกณฑ์ปกติมักจะไม่ค่อยมีโรคร้ายอุบัติการณ์ของโรคเบาหวานและความดันโลหิตสูง"
+            result += "Normal weight, If the amount of fat is within the normal range, there is rarely an incidence of diabetes and high blood pressure."
         } else {
-            result += "น้ำหนักน้อยเกินไป ควรรับประทานอาหารที่มีคุณภาพ และมีปริมาณพลังงานเพียงพอ และออกกําลังกายอย่างเหมาะสม"
+            result += "Underweight, You should eat quality food. and has sufficient energy and exercise appropriately."
         }
         return result
     }
+    var body: some View {
+        ZStack {
+            Color.init(red: 239/255, green: 244/255, blue: 244/255)
+            
+        }
+    }
 }
+    
