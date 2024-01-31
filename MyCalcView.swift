@@ -9,6 +9,7 @@ import SwiftUI
 
 struct MyCalcView: View {
     
+    
     // delare values
     @State private var myWeight : Int = 55
     @State private var myHeight : Int = 165
@@ -90,12 +91,20 @@ struct MyCalcView: View {
                             .foregroundColor(.white)
                     }
                 }
+                
+                .offset(y: 20)
                 Text("\(myBMIResult)")
                     .lineLimit(nil)
                     .multilineTextAlignment(.leading)
                     .frame(minWidth: /*@START_MENU_TOKEN@*/0/*@END_MENU_TOKEN@*/, maxWidth: .infinity)
+                    .offset(y : 25)
+                
+                Spacer()
                 
             }
+            .padding(.horizontal, 15)
+            .navigationTitle("Calculate BMI")
         }
+        .edgesIgnoringSafeArea(.bottom)
     }
 }
