@@ -16,7 +16,7 @@ struct MyCalcView: View {
     @State private var myBMIResult : String = ""
     
     func bmiresultinterpert(bmiValue: Double) -> String {
-        var result : String = "BMI Value = \(bmiValue) \n"
+        var result : String = "BMI Value = \(round(bmiValue * 100) / 100) \n"
         // translation not final
         // (rant below)
         // it english cause the whole app is in english why would be in thai
@@ -68,7 +68,9 @@ struct MyCalcView: View {
                     .cornerRadius(10)
                     
                 }
+                
                 .offset(y : 20)
+                
                 HStack {
                     
                     Button(action: {
