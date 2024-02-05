@@ -9,7 +9,6 @@ import SwiftUI
 
 struct MyCalcView: View {
     
-    
     // delare values
     @State private var myWeight : Int = 55
     @State private var myHeight : Int = 165

@@ -5,7 +5,6 @@
 //  Created by Thapat Auechaikasem on 23/1/67.
 //
 
-
 import SwiftUI
 
 struct MyDevView: View {
