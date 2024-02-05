@@ -110,6 +110,7 @@ struct MyCalcView: View {
                         .multilineTextAlignment(.center)
                         .frame(minWidth: 0, maxWidth: .infinity, maxHeight: 40)
                         .background(.green)
+                        .foregroundColor(.white)
                         .cornerRadius(10)
                         .offset(y: 30)
                 }
