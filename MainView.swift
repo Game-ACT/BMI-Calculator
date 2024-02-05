@@ -1,8 +1,3 @@
-// if you gonna copy my code put credit or smth.
-// also use "Thapat "Game" Auechaikasem"
-// no credit = you're cringe
-// and also anything else = you're cringe x100
-// and both is just two of them combined
 
 import SwiftUI
 
