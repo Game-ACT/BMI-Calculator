@@ -18,7 +18,7 @@ struct MyCalcView: View {
     
     
     func bmicalculate(bmiValue: Double) -> String {
-        var result : String = "BMI Value = \(round(bmiValue * 100) / 100) \n"
+        let result : String = "BMI Value = \(round(bmiValue * 100) / 100) \n"
         return result
     }
     
@@ -46,7 +46,6 @@ struct MyCalcView: View {
     
     var body: some View {
         ZStack {
-            Color.init(red: 239/255, green: 244/255, blue: 244/255)
             VStack {
                 VStack {
                     
@@ -57,7 +56,7 @@ struct MyCalcView: View {
                     }
                     .font(.system(size: 20, weight: .heavy))
                     .foregroundColor(.white)
-                    .frame(minWidth: /*@START_MENU_TOKEN@*/0/*@END_MENU_TOKEN@*/, maxWidth: .infinity, minHeight: 45)
+                    .frame(minWidth: 0, maxWidth: .infinity, minHeight: 45)
                     .padding(20)
                     .background(.yellow)
                     .cornerRadius(10)
@@ -67,9 +66,9 @@ struct MyCalcView: View {
                     } onDecrement: {
                         self.myHeight -= 1
                     }
-                    .font(.system(size: 20, weight: .heavy))
+                    .font(.system(size: 19, weight: .heavy))
                     .foregroundColor(.white)
-                    .frame(minWidth: /*@START_MENU_TOKEN@*/0/*@END_MENU_TOKEN@*/, maxWidth: .infinity, minHeight: 45)
+                    .frame(minWidth: 0, maxWidth: .infinity, minHeight: 45)
                     .padding(20)
                     .background(.orange)
                     .cornerRadius(10)
@@ -85,8 +84,8 @@ struct MyCalcView: View {
                         self.myBMIInterpert = self.bmiresultinterpert(bmiValue: Double(self.myWeight) / (pow(Double(self.myHeight) / 100, 2)))
                     }){
                         Text("Show BMI Value")
-                            .fontWeight(/*@START_MENU_TOKEN@*/.bold/*@END_MENU_TOKEN@*/)
-                            .frame(minWidth: /*@START_MENU_TOKEN@*/0/*@END_MENU_TOKEN@*/, maxWidth: .infinity, minHeight: 0 ,maxHeight: 45)
+                            .fontWeight(.bold)
+                            .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0 ,maxHeight: 45)
                             .background(.red)
                             .foregroundColor(.white)
                     }
@@ -96,8 +95,8 @@ struct MyCalcView: View {
                         self.myBMIInterpert = ""
                     }){
                         Text("Clear Result")
-                            .fontWeight(/*@START_MENU_TOKEN@*/.bold/*@END_MENU_TOKEN@*/)
-                            .frame(minWidth: /*@START_MENU_TOKEN@*/0/*@END_MENU_TOKEN@*/, maxWidth: .infinity, minHeight: 0 ,maxHeight: 45)
+                            .fontWeight(.bold)
+                            .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0 ,maxHeight: 45)
                             .background(.blue)
                             .foregroundColor(.white)
                     }
@@ -105,18 +104,25 @@ struct MyCalcView: View {
                 
                 .offset(y: 20)
                 
-                Text("\(myBMIResult)")
-                    .lineLimit(nil)
-                    .multilineTextAlignment(.leading)
-                    .font(.system(.headline, design: .rounded))
-                    .frame(minWidth: /*@START_MENU_TOKEN@*/0/*@END_MENU_TOKEN@*/, maxWidth: .infinity)
-                    .offset(y : 35)
+                if myBMIResult != "" {
+                    Text("\(myBMIResult)")
+                        .font(.system(size: 18, design: .rounded))
+                        .fontWeight(.bold)
+                        .multilineTextAlignment(.center)
+                        .frame(minWidth: 0, maxWidth: .infinity, maxHeight: 40)
+                        .background(.green)
+                        .cornerRadius(10)
+                        .offset(y: 30)
+                }
                 
-                Text("\(myBMIInterpert)")
-                    .lineLimit(nil)
-                    .multilineTextAlignment(.leading)
-                    .frame(minWidth: /*@START_MENU_TOKEN@*/0/*@END_MENU_TOKEN@*/, maxWidth: .infinity)
-                    .padding(.vertical, 15.0)
+                if myBMIInterpert != "" {
+                    Text("\(myBMIInterpert)")
+                        .lineLimit(nil)
+                        .multilineTextAlignment(.leading)
+                        .frame(minWidth: 0, maxWidth: .infinity)
+                        .offset(y: 30)
+                }
+                
                 Spacer()
                 
             }
@@ -124,5 +130,10 @@ struct MyCalcView: View {
             .navigationTitle("Calculate BMI")
         }
         .edgesIgnoringSafeArea(.bottom)
+        .preferredColorScheme(.light)
     }
 }
+
+/*#Preview {
+    MyCalcView()
+}*/
