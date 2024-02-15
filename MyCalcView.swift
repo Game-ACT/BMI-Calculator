@@ -105,10 +105,12 @@ struct MyCalcView: View {
                 
                 if myBMIResult != "" {
                     Text("\(myBMIResult)")
+                        .padding(.top, 20)
                         .font(.system(size: 18, design: .rounded))
                         .fontWeight(.bold)
                         .multilineTextAlignment(.center)
-                        .frame(minWidth: 0, maxWidth: .infinity, maxHeight: 40)
+                        .fixedSize(horizontal: false, vertical: true)
+                        .frame(minWidth: 0, maxWidth: .infinity)
                         .background(.green)
                         .foregroundColor(.white)
                         .cornerRadius(10)
@@ -120,7 +122,7 @@ struct MyCalcView: View {
                         .lineLimit(nil)
                         .multilineTextAlignment(.leading)
                         .frame(minWidth: 0, maxWidth: .infinity)
-                        .offset(y: 30)
+                        .offset(y: 50)
                 }
                 
                 Spacer()
