@@ -15,7 +15,7 @@ struct MainView: View {
                 
                 Text("Calculate BMI")
                     .font(.system(.title, design: .rounded))
-                    .fontWeight(/*@START_MENU_TOKEN@*/.bold/*@END_MENU_TOKEN@*/)
+                    .fontWeight(.bold)
                     .foregroundColor(.white)
                     .frame(maxWidth: 200)
                     .background(.black)
@@ -34,7 +34,7 @@ struct MainView: View {
                 
                 Text("About Developer")
                     .font(.system(.title, design: .rounded))
-                    .fontWeight(/*@START_MENU_TOKEN@*/.bold/*@END_MENU_TOKEN@*/)
+                    .fontWeight(.bold)
                     .foregroundColor(.white)
                     .frame(maxWidth: 240)
                     .background(.black)

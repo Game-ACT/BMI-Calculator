@@ -37,7 +37,7 @@ struct MyDevView: View {
                 // just use google translate lul
                 Link("Game11454@proton.me", destination: URL(string: "mailto:Game11454@proton.me" )!)
                     .font(.system(.headline,design: .rounded))
-                    .fontWeight(/*@START_MENU_TOKEN@*/.bold/*@END_MENU_TOKEN@*/)
+                    .fontWeight(.bold)
                     .padding(.top, 10)
             }
             .navigationTitle("About Me")
