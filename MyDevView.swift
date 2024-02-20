@@ -20,7 +20,7 @@ struct MyDevView: View {
                     .padding(.bottom, 30)
                 Text("Thapat Auechaikasem")
                     .font(.system(.title,design: .rounded))
-                    .fontWeight(/*@START_MENU_TOKEN@*/.bold/*@END_MENU_TOKEN@*/)
+                    .fontWeight(.bold)
                     .foregroundColor(.white)
                     .frame(maxWidth: 310, maxHeight: 50)
                     .background(.green)
